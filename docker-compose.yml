@@ -3,9 +3,9 @@ version: "3.10"
 services:
   bot-pos:
     build:
-      context: ./pos/
+      context: ./
       dockerfile: Dockerfile
-    container_name: aiogram_bot_linzy_pos
+    container_name: araba_bot
     restart: always
     volumes:
       - ./evacuation.db:/app/evacuation.db
