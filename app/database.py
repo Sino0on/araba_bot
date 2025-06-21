@@ -1,8 +1,11 @@
 import sqlite3
 from typing import Optional, List, Tuple
+import os
 
-DB_PATH = "evacuation.db"
+# Убедимся, что директория для базы данных существует
+os.makedirs("data", exist_ok=True)
 
+DB_PATH = "data/evacuation.db"
 conn = sqlite3.connect(DB_PATH, check_same_thread=False)
 cursor = conn.cursor()
 
